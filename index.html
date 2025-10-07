@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VNMaterial - Website tổng hợp thông tin vật liệu xây dựng Việt Nam</title>
+    <meta name="description" content="VNMaterial là nguồn thông tin toàn diện, đáng tin cậy về vật liệu xây dựng tại Việt Nam">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar simple">
+                <div class="nav-left brand-block">
+                    <a href="index.html" class="brand-box">
+                        <img src="assets/images/logo.png" alt="VNM" class="logo-small">
+                    </a>
+                </div>
+
+                <ul class="nav-menu simple-menu">
+                    <li class="nav-item">
+                        <span class="nav-index">01</span>
+                        <span class="nav-label">KIẾN TRÚC</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-index">02</span>
+                        <span class="nav-label">NỘI THẤT</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-index">03</span>
+                        <span class="nav-label">NHÀ CUNG CẤP</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-index">04</span>
+                        <span class="nav-label">TIN TỨC</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-index">05</span>
+                        <span class="nav-label">DỊCH VỤ</span>
+                    </li>
+                </ul>
+
+                <div class="nav-actions simple-actions">
+                    <button class="icon-square" aria-label="search"><i class="fas fa-search"></i></button>
+                    <button class="icon-square" aria-label="account"><i class="fas fa-user-circle"></i></button>
+                    <button class="icon-square lang-square" data-lang="en">EN</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Product Slider Section -->
+    <section class="product-slider">
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <div class="slide active" data-link="ceramic-tiles.html">
+                    <img src="assets/images/slider/slide-1.svg" alt="Gạch Ceramic Cao Cấp">
+                    <div class="slide-overlay">
+                        <div class="slide-content">
+                            <h3>Gạch Ceramic Cao Cấp 2024</h3>
+                            <p>Bộ sưu tập mới nhất với công nghệ chống trượt</p>
+                            <span class="slide-cta">Xem Chi Tiết →</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" data-link="eco-paint.html">
+                    <img src="assets/images/slider/slide-2.svg" alt="Sơn Chống Thấm Eco">
+                    <div class="slide-overlay">
+                        <div class="slide-content">
+                            <h3>Sơn Chống Thấm Eco-Friendly</h3>
+                            <p>Thân thiện môi trường, an toàn sức khỏe</p>
+                            <span class="slide-cta">Khám Phá →</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" data-link="smart-cement.html">
+                    <img src="assets/images/slider/slide-3.svg" alt="Xi Măng Thông Minh">
+                    <div class="slide-overlay">
+                        <div class="slide-content">
+                            <h3>Xi Măng Thông Minh IoT</h3>
+                            <p>Công nghệ tiên tiến, tự điều chỉnh</p>
+                            <span class="slide-cta">Tìm Hiểu →</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" data-link="steel-construction.html">
+                    <img src="assets/images/slider/slide-4.svg" alt="Thép Xây Dựng">
+                    <div class="slide-overlay">
+                        <div class="slide-content">
+                            <h3>Thép Xây Dựng Chất Lượng Cao</h3>
+                            <p>Đạt chuẩn quốc tế, độ bền vượt trội</p>
+                            <span class="slide-cta">Báo Giá →</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Arrows -->
+            <button class="slider-arrow prev-arrow" onclick="changeSlide(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-arrow next-arrow" onclick="changeSlide(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Dots Navigation -->
+            <div class="slider-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <img src="assets/images/materials-icon.svg" alt="Vật tư">
+                    </div>
+                    <div class="stat-number">1,483</div>
+                    <div class="stat-label">Vật Tư Đăng Tải</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <img src="assets/images/suppliers-icon.svg" alt="Nhà cung cấp">
+                    </div>
+                    <div class="stat-number">185</div>
+                    <div class="stat-label">Nhà Cung Cấp</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <img src="assets/images/categories-icon.svg" alt="Danh mục">
+                    </div>
+                    <div class="stat-number">37</div>
+                    <div class="stat-label">Danh Mục Vật Tư</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Mission Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">VNMaterial & sứ mệnh</h2>
+            </div>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <img src="assets/images/community-icon.svg" alt="Cộng đồng">
+                    </div>
+                    <div class="mission-number">01.</div>
+                    <h3 class="mission-title">Cộng Đồng</h3>
+                    <p class="mission-description">
+                        Cộng đồng VNMaterial – Kết nối, học hỏi và cùng nhau xây dựng.
+                    </p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <img src="assets/images/commitment-icon.svg" alt="Cam kết">
+                    </div>
+                    <div class="mission-number">02.</div>
+                    <h3 class="mission-title">Cam Kết</h3>
+                    <p class="mission-description">
+                        Tại VNMaterial, chúng tôi cam kết cung cấp thông tin vật tư chất lượng cao nhất cho ngành xây dựng.
+                    </p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <img src="assets/images/innovation-icon.svg" alt="Sáng tạo">
+                    </div>
+                    <div class="mission-number">03.</div>
+                    <h3 class="mission-title">Sáng Tạo Và Đổi Mới</h3>
+                    <p class="mission-description">
+                        VNMaterial – Truyền cảm hứng đổi mới. Chúng tôi khuyến khích tư duy đổi mới và khám phá những ý tưởng và vật liệu mới.
+                    </p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <img src="assets/images/mission-icon.svg" alt="Sứ mệnh">
+                    </div>
+                    <div class="mission-number">04.</div>
+                    <h3 class="mission-title">Sứ Mệnh</h3>
+                    <p class="mission-description">
+                        VNMaterial – Nền tảng vững chắc cho mọi dự án - cung cấp thông tin cập nhật và hữu ích về vật liệu, kỹ thuật và xu hướng xây dựng.
+                    </p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <img src="assets/images/vision-icon.svg" alt="Tầm nhìn">
+                    </div>
+                    <div class="mission-number">05.</div>
+                    <h3 class="mission-title">Tầm Nhìn</h3>
+                    <p class="mission-description">
+                        VNMaterial – Cùng nhau xây dựng tương lai bền vững - hướng tới trở thành nguồn cung cấp kiến thức vật liệu xây dựng hàng đầu tại Việt Nam.
+                    </p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <img src="assets/images/sustainability-icon.svg" alt="Bền vững">
+                    </div>
+                    <div class="mission-number">06.</div>
+                    <h3 class="mission-title">Bền Vững</h3>
+                    <p class="mission-description">
+                        VNMaterial ủng hộ các hoạt động thân thiện với môi trường và vật liệu bền vững.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Materials Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tìm kiếm vật tư</h2>
+                <div class="search-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+            <p class="search-subtitle">hoặc bạn đang tìm kiếm....</p>
+            <div class="search-tags">
+                <a href="#" class="search-tag">XI MĂNG</a>
+                <a href="#" class="search-tag">VỈ THOÁT NƯỚC</a>
+                <a href="#" class="search-tag">MÀNG GCL</a>
+                <a href="#" class="search-tag">MÀNG HDPE</a>
+                <a href="#" class="search-tag">THIẾT BỊ VỆ SINH</a>
+                <a href="#" class="search-tag">THẢM</a>
+                <a href="#" class="search-tag">GIẤY DÁN TƯỜNG</a>
+                <a href="#" class="search-tag">ĐÁ TỰ NHIÊN</a>
+            </div>
+            <div class="search-links">
+                <a href="#" class="search-link">
+                    <span>Nhà cung cấp</span>
+                    <span>Đơn vị cung cấp vật tư</span>
+                </a>
+                <a href="#" class="search-link">
+                    <span>Danh mục vật tư</span>
+                    <span>Bạn đang tìm</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News/Blog Section -->
+    <section id="news" class="news">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Bản tin VNMaterial</h2>
+            </div>
+            <div class="news-grid">
+                <article class="news-item featured">
+                    <div class="news-image">
+                        <img src="assets/images/news-1.svg" alt="Gỗ trong suốt">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">BẢN TIN TỔNG HỢP</div>
+                        <div class="news-date">04/10/2025</div>
+                        <h3 class="news-title">
+                            GỖ TRONG SUỐT – VẬT LIỆU TƯƠNG LAI THAY THẾ KÍNH TRONG KIẾN TRÚC XANH
+                        </h3>
+                        <p class="news-excerpt">
+                            Khi các tòa nhà chuyển dịch sang kiến trúc net zero và chiếu sáng tự nhiên không gây lóa, 
+                            lớp bao che bằng kính truyền thống bộc lộ hạn chế...
+                        </p>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <div class="news-image">
+                        <img src="assets/images/news-2.svg" alt="Hệ thống thoát nước">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">BẢN TIN TỔNG HỢP</div>
+                        <div class="news-date">27/09/2025</div>
+                        <h3 class="news-title">
+                            Thành phố không ngập lụt: Bí mật từ hệ thống Phúc Thọ Câu
+                        </h3>
+                        <p class="news-excerpt">
+                            Ngập lụt đô thị đang là thách thức lớn của thời hiện đại, 
+                            khi những cơn mưa bất thường có thể khiến cả thành phố tê liệt...
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <div class="news-navigation">
+                <button class="nav-btn prev-btn">←Previous</button>
+                <button class="nav-btn next-btn">Next→</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Đối tác</h2>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <img src="assets/images/partner-1.svg" alt="Armstrong">
+                </div>
+                <div class="partner-item">
+                    <img src="assets/images/partner-2.svg" alt="Adchem">
+                </div>
+                <div class="partner-item">
+                    <img src="assets/images/partner-3.svg" alt="ABC Play">
+                </div>
+                <div class="partner-item">
+                    <img src="assets/images/partner-4.svg" alt="Acoustar">
+                </div>
+                <div class="partner-item">
+                    <img src="assets/images/partner-5.svg" alt="AICA">
+                </div>
+                <div class="partner-item">
+                    <img src="assets/images/partner-6.svg" alt="ALSAFLOOR">
+                </div>
+                <div class="partner-item">
+                    <img src="assets/images/partner-7.svg" alt="ALMECO">
+                </div>
+            </div>
+            <div class="partners-footer">
+                <a href="#" class="btn btn-outline">Xem thêm Đối tác</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <h3>Việt Nam Material</h3>
+                        <p>
+                            VNMaterial là website cung cấp nguồn kiến thức xây dựng đáng tin cậy, 
+                            chuyên cung cấp thông tin chính xác và hiểu biết sâu sắc về vật liệu, 
+                            kỹ thuật và thực hành bền vững.
+                        </p>
+                        <div class="contact-info">
+                            <p><i class="fas fa-phone"></i> (+84) 347 703 123</p>
+                            <p><i class="fas fa-envelope"></i> info@vnmaterial.vn</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>VNMaterial.vn - Thông tin vật tư</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Dịch vụ</a></li>
+                        <li><a href="#">Danh mục vật tư</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Hỏi đáp</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Danh mục vật liệu</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Kết cấu</a></li>
+                        <li><a href="#">Kiến trúc</a></li>
+                        <li><a href="#">Nội thất</a></li>
+                        <li><a href="#">Cảnh quan</a></li>
+                        <li><a href="#">Loại công trình</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Nhà cung cấp</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Nhà Cung Cấp</a></li>
+                        <li><a href="#">Trở thành nhà cung cấp</a></li>
+                    </ul>
+                    <h4>Chính sách</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Quyền và nghĩa vụ nhà cung cấp</a></li>
+                        <li><a href="#">Trách nhiệm pháp lý</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="copyright">Copyright © 2024 VNMATERIAL.VN.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

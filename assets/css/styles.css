@@ -191,7 +191,7 @@ p {
 
 .nav-menu.simple-menu .nav-index {
     display: block; /* changed to block for stacked layout */
-    font-size: 0.6rem; /* reduced 50% from 1.2rem */
+    font-size: 0.81rem; /* increased 30% from 0.6rem */
     color: rgba(11,121,193,0.8);
     margin-right: 0; /* no right margin for stacked layout */
     font-weight: 700;
@@ -229,13 +229,15 @@ p {
 }
 
 .icon-square, .lang-square {
-    color: #0b79c1;
+    /* Match nav label base color */
+    color: rgba(11,121,193,0.85);
     border-color: rgba(11,121,193,0.18);
 }
 
 .icon-square:hover, .lang-square:hover {
-    color: #054f7a;
-    border-color: rgba(5,79,122,0.2);
+    /* Match nav label hover color */
+    color: #0a0952;
+    border-color: rgba(10,9,82,0.12);
 }
 
 /* Keep header static: remove transform/animations; only change color on hover */
@@ -258,8 +260,8 @@ p {
     align-items: center;
     justify-content: center;
     background: transparent;
-    color: rgba(255,255,255,0.95);
-    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--primary-color); /* Màu xanh chủ đạo */
+    border: 1px solid var(--primary-color);
     border-radius: 6px;
 }
 
